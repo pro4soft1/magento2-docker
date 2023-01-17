@@ -1,0 +1,26 @@
+#!/bin/bash
+echo "Start Running Sayed Mohamed Code ..."&&
+echo "################################"
+bin/download 2.4.3 community
+echo "############## SETUP MAGENTO 2 ##################"
+bin/setup
+echo "###############################################################"
+bin/fixowns
+echo "############## disable Magento_TwoFactorAuth  ##################"
+bin/clinotty bin/magento module:disable Magento_TwoFactorAuth
+echo "###############################################################"
+
+echo "############## Install ShopFinder Via Composer ##################"
+
+echo "Running Install ShopFinder Module Via Composer ..."
+bin/composer require sf/module-shopfinder
+echo "##############  ShopFinder installed ##################"
+
+echo "Running Setup Upgrade"
+bin/magento s:up
+echo "Running dependency injection compiler"
+bin/magento s:d:c
+echo "Running Cache Flush"
+bin/magento c:f
+
+open http://magento2.local/admin

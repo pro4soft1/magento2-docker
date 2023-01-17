@@ -41,11 +41,11 @@ bin/clinotty bin/magento setup:install \
   --language="$MAGENTO_LOCALE" \
   --currency="$MAGENTO_CURRENCY" \
   --timezone="$MAGENTO_TIMEZONE" \
-  --amqp-host=rabbitmq \
-  --amqp-port=5672 \
-  --amqp-user=guest \
-  --amqp-password=guest \
-  --amqp-virtualhost=/ \
+    --amqp-host=rabbitmq \
+    --amqp-port=5672 \
+    --amqp-user=admin \
+    --amqp-password=YjJiOTY0NDAxNWRkNmI1Y2Yx \
+    --amqp-virtualhost=DSrabbitmq \
   --cache-backend=redis \
   --cache-backend-redis-server=redis \
   --cache-backend-redis-db=0 \

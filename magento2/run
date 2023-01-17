@@ -23,4 +23,4 @@ bin/magento s:d:c
 echo "Running Cache Flush"
 bin/magento c:f
 
-open http://magento2.local/admin
+echo Your Magento2 Admin is  http://magento2.local/admin

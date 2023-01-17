@@ -15,15 +15,18 @@
 
 4. Please Make sure you stoped the other processes for web services like port 80 and 9200
 
-5. To Start the project go to magento 2 folder and excute **`run`** file in terminal
-  - `sh run`
-  - Then the project will be started Automatically
-  - will install docker compose libraries 
-  - will install magento 2 via composer
-  - will setup magento 2 automatically
-  - will install ShopFinder Module Via Composer Automatically Also You Can do it manually  in magento2 folder run this 
-
-  - `bin/composer require sf/module-shopfinder `
+5. To Start the project there are 2 ways to start the project
+6. first one is run this command line in your magento2 folder `sh run` this sometimes  doesn't work if your computer not faster
+7. Here is the another way to start the project
+7. go to magento 2 folder and execute the following command make sure you in magento2 folder
+  - `bin/download 2.4.3 community`
+  - `bin/setup`
+  - `bin/fixowns`
+  - `bin/clinotty bin/magento module:disable Magento_TwoFactorAuth`
+  - `bin/composer require sf/module-shopfinder`
+  - `bin/magento s:up`
+  - `bin/magento s:d:c`
+  - `bin/magento c:f`
 
 
     to access magneto2 admin you need to go 

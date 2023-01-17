@@ -3,7 +3,7 @@
 ### Steps :
 
 
-`
+
 1. clone this repository by running the following command
 
 ``   `git clone https://github.com/pro4soft1/magento2-docker.git

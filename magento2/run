@@ -17,10 +17,10 @@ bin/composer require sf/module-shopfinder
 echo "##############  ShopFinder installed ##################"
 
 echo "Running Setup Upgrade"
-bin/magento s:up
+bin/clinotty bin/magento s:up
 echo "Running dependency injection compiler"
-bin/magento s:d:c
+bin/clinotty bin/magento s:d:c
 echo "Running Cache Flush"
-bin/magento c:f
+bin/clinotty bin/magento c:f
 
 echo Your Magento2 Admin is  http://magento2.local/admin
